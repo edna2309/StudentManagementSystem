@@ -1,0 +1,17 @@
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Data.deps.json
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Data.runtimeconfig.json
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Data.dll
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Data.pdb
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.csproj.AssemblyReference.cache
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.AssemblyInfoInputs.cache
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.AssemblyInfo.cs
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.csproj.CoreCompileInputs.cache
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.dll
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\refint\StudentManagementSystem.Data.dll
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.pdb
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.genruntimeconfig.cache
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\ref\StudentManagementSystem.Data.dll
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Common.dll
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\bin\Debug\net6.0\StudentManagementSystem.Common.pdb
+D:\Visual Studio projects\StudentManagementSystem\StudentManagementSystem.Data\obj\Debug\net6.0\StudentManagementSystem.Data.csproj.CopyComplete
