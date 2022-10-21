@@ -52,21 +52,21 @@ namespace StudentManagementSystem.Data.Migrations
                         new
                         {
                             Id = "88105423-d222-48ec-85c5-04e4f3cb2aa6",
-                            ConcurrencyStamp = "26b238b8-2065-4eb4-9786-2e877225c302",
+                            ConcurrencyStamp = "bd9778da-70f3-4bc2-a9bf-011de4d9e2a6",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = "4a15c4bc-ffac-481c-b997-475a1e82c911",
-                            ConcurrencyStamp = "2b06815b-8ef8-491d-8e03-9e2f3a21ea7e",
+                            ConcurrencyStamp = "bde6e76e-cf84-400d-ad16-3743eb08536d",
                             Name = "SystemManager",
                             NormalizedName = "SYSTEMMANAGER"
                         },
                         new
                         {
                             Id = "8bb3807a-9f64-42a6-9b15-e9ca45435d16",
-                            ConcurrencyStamp = "7b6f19a8-4025-4e3c-9c0d-1dfdce9fcbac",
+                            ConcurrencyStamp = "5f49100c-a31d-490d-a759-51e90fff2671",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         });
@@ -270,6 +270,32 @@ namespace StudentManagementSystem.Data.Migrations
                     b.ToTable("UserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("StudentManagementSystem.Data.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Departments", (string)null);
+                });
+
             modelBuilder.Entity("StudentManagementSystem.Data.User", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -293,19 +319,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "807d4075-6fa0-465e-aa89-6255708fde21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2c556c9d-c67f-4dee-9e06-75058c82b1a9",
+                            ConcurrencyStamp = "53a95286-b143-4a98-a745-637e89c08460",
                             Email = "superadmin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@LOCALHOST.COM",
                             NormalizedUserName = "SUPERADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFlP8LVoOt0qW0fAb+ISjpYGVynoUvz34nuL2OJNOSrtUoSNF3pnKhQQeJ0vW66pFQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBG/3w+biA3rIxg/4kFHuDTrzCkYPoU0MKDb5qFM461KGRQXCUjieT5qL4kXbTB03Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9c594466-9d56-4a21-873e-e627dd8379f5",
+                            SecurityStamp = "59c4c63c-1863-4b09-8ce2-67351fc418a4",
                             TwoFactorEnabled = false,
                             UserName = "superadmin@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 15, 13, 17, 5, 273, DateTimeKind.Local).AddTicks(4535),
-                            DateModified = new DateTime(2022, 10, 15, 13, 17, 5, 273, DateTimeKind.Local).AddTicks(4572),
+                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 830, DateTimeKind.Local).AddTicks(7750),
+                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 830, DateTimeKind.Local).AddTicks(7785),
                             FirstName = "SuperAdmin",
                             LastName = "SuperAdmin"
                         },
@@ -313,19 +339,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "5843c9b4-cb39-4efd-843c-dbaea81c4706",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "24f1e9ca-1210-4c0c-9da0-1eb521c4d5c5",
+                            ConcurrencyStamp = "1520676c-541d-49fa-890b-d15cf1c1e73c",
                             Email = "sysmanager@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SYSMANAGER@LOCALHOST.COM",
                             NormalizedUserName = "SYSMANAGER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEF4iKbqwIDMQ1GqYFwcchwb4xCdsWe47WqIu1reZEZP9DrsNu1xHBpP2549YKOe80Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKCxumZXeXb5DBEXxlZc6MTOixvpSwvqdNXQsJnyglrZG1IYMAoJt77gSlO0EJ5hwA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "42ce1675-f716-4de4-98f3-a6b7736fd8c8",
+                            SecurityStamp = "5351c3cc-2f1e-4939-b2a0-5bc0049c07c6",
                             TwoFactorEnabled = false,
                             UserName = "sysmanager@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 15, 13, 17, 5, 274, DateTimeKind.Local).AddTicks(5586),
-                            DateModified = new DateTime(2022, 10, 15, 13, 17, 5, 274, DateTimeKind.Local).AddTicks(5589),
+                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 831, DateTimeKind.Local).AddTicks(8865),
+                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 831, DateTimeKind.Local).AddTicks(8867),
                             FirstName = "System",
                             LastName = "Manager"
                         },
@@ -333,19 +359,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "37ccb1d3-1a9b-4a38-99de-eb91eeb95adf",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5dae7bd1-daf6-4a24-8436-17228f94b8dd",
+                            ConcurrencyStamp = "a809fec7-060f-4978-9fc7-3a9a0341e85a",
                             Email = "student@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "STUDENT@LOCALHOST.COM",
                             NormalizedUserName = "STUDENT@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECOjLtUWSY0CBOQa9MriIPbrgRsmdA3mBF+EtRyUkbnwew99Hl4VjRuFRj6rArDqkQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL6Hc6yGkxroQxpsdAshJJWq3uxGu8WXTtcxqYtgLw0uCepAhJ2blxf19N0w7PVwdQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c798fdc9-c3c3-490e-9b40-7444a238d41f",
+                            SecurityStamp = "74ece44a-e736-454c-b888-9dd0f0a0205b",
                             TwoFactorEnabled = false,
                             UserName = "student@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 15, 13, 17, 5, 275, DateTimeKind.Local).AddTicks(6594),
-                            DateModified = new DateTime(2022, 10, 15, 13, 17, 5, 275, DateTimeKind.Local).AddTicks(6597),
+                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 832, DateTimeKind.Local).AddTicks(9927),
+                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 832, DateTimeKind.Local).AddTicks(9929),
                             FirstName = "Annie",
                             LastName = "Marrie"
                         });

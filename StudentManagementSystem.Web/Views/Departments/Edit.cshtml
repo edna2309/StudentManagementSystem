@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model StudentManagementSystem.Common.Models.DepartmentVM
+
+
+<h5>Update @Model.Name</h5>
+<h7>Enter info about the department</h7> 
+
+<div class="d-flex justify-content-between"> 
+    <div asp-validation-summary="ModelOnly"></div>
+    @using (Html.BeginForm("Delete", "Departments", FormMethod.Post))
+    {
+         <input type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3" onclick="Delete()" value="Delete department" />
+         <input type="hidden" asp-for="Id" />
+         <input type="hidden" name="confirm" id="confirm"/>
+    }
+</div>
+<form asp-controller="Departments" asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.Name)</label>
+        <input asp-for="Name" type="text" class="form-control" id="Name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.Description)</label>
+        <input asp-for="Description" type="text" class="form-control" id="Description">
+    </div>
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3">Save</button>
+</form>
+
+<script type="text/javascript">
+    function Delete() {
+        var input = $("#confirm");
+        //input.attr("type", "hidden").attr("asp-for", "confirm_value");
+        //input.attr({
+        //    "type": "hidden", "name": "confirm_value"})
+        if (confirm("Do you want to delete this department?")) {
+            input.val("Yes");
+        } else {
+            input.val("No");
+        }
+        //$("form")[0].append(input);
+    }
+</script>
