@@ -15,6 +15,7 @@ namespace StudentManagementSystem.Common.Models
         public string? Name { get; set; }
 
         [Required]
+        [StringLength(1000, ErrorMessage = "Description must contain at least 10 characters.")]
         public string? Description { get; set; }
     }
 }

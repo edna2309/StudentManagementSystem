@@ -1,12 +1,11 @@
 ﻿@{
-    //ViewData["Title"] = "SMS - View departments";
+    ViewData["Title"] = "SMS - View departments";
 }
 @model IEnumerable<StudentManagementSystem.Common.Models.DepartmentVM>
     
 
 <h5 class="p-15">DEPARTMENTS</h5>
 
-<h2>@ViewData["Deleted"]</h2>
 <div class="d-flex justify-content-end">
     <a class="btn btn-outline-primary btn-sm mb-0 me-3" asp-controller="Departments" asp-action="Create">Add department</a>
 </div>
@@ -34,7 +33,17 @@
             {
                 <tr>
                     <td>@department.Name</td>
-                    <td>@department.Description</td>
+                    <td>
+                        @if (@department.Description.Length > 100)
+                        {
+                           @string.Concat(department.Description.Substring(0, 100), "...");
+
+                        }else
+                        {
+                            @department.Description                       
+                        }
+                        </td>
+                        
                     <td>
                         <a asp-controller="Departments" asp-action="Edit" asp-route-id="@department.Id" 
                         class="text-secondary font-weight-bold text-xs" data-toggle="tooltip">

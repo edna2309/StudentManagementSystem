@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagementSystem.BusinessLogic.Contracts;
 using StudentManagementSystem.Common.Constants;
 using StudentManagementSystem.Common.Models;
-using StudentManagementSystem.Data;
 
 namespace StudentManagementSystem.Web.Controllers
 {
@@ -52,8 +50,8 @@ namespace StudentManagementSystem.Web.Controllers
             }
             catch(Exception ex)
             {
-
-                return View();
+                ModelState.AddModelError(ex.ToString(), "An issue occurred, please try again.\n" + ex.ToString());
+                return View(model);
             }
         }
 
@@ -80,8 +78,10 @@ namespace StudentManagementSystem.Web.Controllers
                 return View(departmentVM);
 
             }
-            catch
+            catch (Exception ex)
             {
+                ModelState.AddModelError(ex.ToString(), "An issue occurred, please try again.\n" + ex.ToString());
+
                 return View();
             }
         }
