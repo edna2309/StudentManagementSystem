@@ -44,12 +44,17 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
 
         public async Task<List<DepartmentVM>?> GetDepartmentsVM()
         {
-            var departments = await applicationDbContext.Departments.ToListAsync();
-            if (departments == null)
+            try
             {
+                var departments = await applicationDbContext.Departments.ToListAsync();
+                return mapper.Map<List<DepartmentVM>>(departments);
+            }
+            catch 
+            {
+                
                 return null;
-            }            
-            return mapper.Map<List<DepartmentVM>>(departments);
+            }
+           
         }
 
         public async Task<DepartmentVM> GetDepartmentVM(int id)

@@ -52,23 +52,16 @@ namespace StudentManagementSystem.Data.Migrations
                         new
                         {
                             Id = "88105423-d222-48ec-85c5-04e4f3cb2aa6",
-                            ConcurrencyStamp = "bd9778da-70f3-4bc2-a9bf-011de4d9e2a6",
+                            ConcurrencyStamp = "b8522226-2971-48aa-90b0-2e39191821ae",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = "4a15c4bc-ffac-481c-b997-475a1e82c911",
-                            ConcurrencyStamp = "bde6e76e-cf84-400d-ad16-3743eb08536d",
+                            ConcurrencyStamp = "c2df7644-0aa1-40b4-8de2-5a6c0aa9d1f4",
                             Name = "SystemManager",
                             NormalizedName = "SYSTEMMANAGER"
-                        },
-                        new
-                        {
-                            Id = "8bb3807a-9f64-42a6-9b15-e9ca45435d16",
-                            ConcurrencyStamp = "5f49100c-a31d-490d-a759-51e90fff2671",
-                            Name = "Student",
-                            NormalizedName = "STUDENT"
                         });
                 });
 
@@ -241,11 +234,6 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             UserId = "5843c9b4-cb39-4efd-843c-dbaea81c4706",
                             RoleId = "4a15c4bc-ffac-481c-b997-475a1e82c911"
-                        },
-                        new
-                        {
-                            UserId = "37ccb1d3-1a9b-4a38-99de-eb91eeb95adf",
-                            RoleId = "8bb3807a-9f64-42a6-9b15-e9ca45435d16"
                         });
                 });
 
@@ -293,7 +281,7 @@ namespace StudentManagementSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("StudentManagementSystem.Data.User", b =>
@@ -319,19 +307,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "807d4075-6fa0-465e-aa89-6255708fde21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "53a95286-b143-4a98-a745-637e89c08460",
+                            ConcurrencyStamp = "e5e4cc52-ed98-4d3d-8fe1-efca6da0676e",
                             Email = "superadmin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@LOCALHOST.COM",
                             NormalizedUserName = "SUPERADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBG/3w+biA3rIxg/4kFHuDTrzCkYPoU0MKDb5qFM461KGRQXCUjieT5qL4kXbTB03Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAT79bpFJR8ALeGR/2ZpKwzHBLUu1tWaIxvXyHDruvo/Zhiq8j626SPp7nhbzbt2mw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "59c4c63c-1863-4b09-8ce2-67351fc418a4",
+                            SecurityStamp = "29f40d15-938f-42f0-be13-9cf7715c7efd",
                             TwoFactorEnabled = false,
                             UserName = "superadmin@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 830, DateTimeKind.Local).AddTicks(7750),
-                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 830, DateTimeKind.Local).AddTicks(7785),
+                            DateCreated = new DateTime(2022, 11, 8, 20, 35, 31, 299, DateTimeKind.Local).AddTicks(6634),
+                            DateModified = new DateTime(2022, 11, 8, 20, 35, 31, 299, DateTimeKind.Local).AddTicks(6671),
                             FirstName = "SuperAdmin",
                             LastName = "SuperAdmin"
                         },
@@ -339,42 +327,38 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "5843c9b4-cb39-4efd-843c-dbaea81c4706",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1520676c-541d-49fa-890b-d15cf1c1e73c",
+                            ConcurrencyStamp = "c89f5afe-cb2b-4413-8900-5a64355e6452",
                             Email = "sysmanager@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SYSMANAGER@LOCALHOST.COM",
                             NormalizedUserName = "SYSMANAGER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKCxumZXeXb5DBEXxlZc6MTOixvpSwvqdNXQsJnyglrZG1IYMAoJt77gSlO0EJ5hwA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPhFv5/D7KNKqSqKRJ9tU5eA3tQu5VYRh6loa+X46/eiwfoM6DjhPwk94xGjY2GX/w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5351c3cc-2f1e-4939-b2a0-5bc0049c07c6",
+                            SecurityStamp = "faf56833-cf6d-4694-884c-0480d83d3b45",
                             TwoFactorEnabled = false,
                             UserName = "sysmanager@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 831, DateTimeKind.Local).AddTicks(8865),
-                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 831, DateTimeKind.Local).AddTicks(8867),
+                            DateCreated = new DateTime(2022, 11, 8, 20, 35, 31, 300, DateTimeKind.Local).AddTicks(7920),
+                            DateModified = new DateTime(2022, 11, 8, 20, 35, 31, 300, DateTimeKind.Local).AddTicks(7923),
                             FirstName = "System",
                             LastName = "Manager"
-                        },
-                        new
-                        {
-                            Id = "37ccb1d3-1a9b-4a38-99de-eb91eeb95adf",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a809fec7-060f-4978-9fc7-3a9a0341e85a",
-                            Email = "student@localhost.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "STUDENT@LOCALHOST.COM",
-                            NormalizedUserName = "STUDENT@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEL6Hc6yGkxroQxpsdAshJJWq3uxGu8WXTtcxqYtgLw0uCepAhJ2blxf19N0w7PVwdQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "74ece44a-e736-454c-b888-9dd0f0a0205b",
-                            TwoFactorEnabled = false,
-                            UserName = "student@localhost.com",
-                            DateCreated = new DateTime(2022, 10, 16, 20, 19, 43, 832, DateTimeKind.Local).AddTicks(9927),
-                            DateModified = new DateTime(2022, 10, 16, 20, 19, 43, 832, DateTimeKind.Local).AddTicks(9929),
-                            FirstName = "Annie",
-                            LastName = "Marrie"
                         });
+                });
+
+            modelBuilder.Entity("StudentManagementSystem.Data.Student", b =>
+                {
+                    b.HasBaseType("StudentManagementSystem.Data.User");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("HighSchool")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Student");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

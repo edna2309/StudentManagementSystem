@@ -42,20 +42,6 @@ namespace StudentManagementSystem.Data.Configuration.Entities
                     EmailConfirmed = true,
                     DateCreated = DateTime.Now,
                     DateModified = DateTime.Now
-                }, 
-                new User
-                {
-                    Id = "37ccb1d3-1a9b-4a38-99de-eb91eeb95adf",
-                    Email = "student@localhost.com",
-                    UserName = "student@localhost.com",
-                    NormalizedEmail = "STUDENT@LOCALHOST.COM",
-                    NormalizedUserName = "STUDENT@LOCALHOST.COM",
-                    FirstName = "Annie",
-                    LastName = "Marrie",
-                    PasswordHash = passwordHasher.HashPassword(null, "P@ssword1"),
-                    EmailConfirmed = true,
-                    DateCreated = DateTime.Now,
-                    DateModified = DateTime.Now
                 }
                 );
         }

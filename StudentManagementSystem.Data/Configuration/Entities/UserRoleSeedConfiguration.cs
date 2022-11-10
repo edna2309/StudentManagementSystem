@@ -25,12 +25,6 @@ namespace StudentManagementSystem.Data.Configuration.Entities
                     //SystemManager
                     RoleId = "4a15c4bc-ffac-481c-b997-475a1e82c911",
                     UserId = "5843c9b4-cb39-4efd-843c-dbaea81c4706"
-                },
-                new IdentityUserRole<string>
-                {
-                    //Student
-                    RoleId = "8bb3807a-9f64-42a6-9b15-e9ca45435d16",
-                    UserId = "37ccb1d3-1a9b-4a38-99de-eb91eeb95adf"
                 });
         }
     }

@@ -5,7 +5,10 @@ using StudentManagementSystem.Data.Configuration.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +17,7 @@ namespace StudentManagementSystem.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -33,7 +37,8 @@ namespace StudentManagementSystem.Data
 
             builder.ApplyConfiguration(new RoleSeedConfiguration());
             builder.ApplyConfiguration(new UserSeedConfiguration());
-            builder.ApplyConfiguration(new UserRoleSeedConfiguration());
+            builder.ApplyConfiguration(new UserRoleSeedConfiguration()); 
+
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
