@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<StudentManagementSystem.Common.Models.StudentVM>
+
+<h5 class="p-15">STUDENTS</h5>
+
+<div class="d-flex justify-content-end">
+    <a class="btn btn-outline-primary btn-sm mb-0 me-3" asp-controller="Students" asp-action="Create">Add new student</a>
+</div>
+
+<table class="table align-items-center mb-0">
+    <thead>
+        <tr>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" scope="col">@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" scope="col">@Html.DisplayNameFor(model => model.LastName)</th>
+            @*<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" scope="col">@Html.DisplayNameFor(model => model.BirthDate)</th>*@
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model == null || Model.Count() == 0)
+        {
+            <tr>
+                <td>No students listed</td>
+                <td></td>
+                <td></td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>
+                        <a asp-controller="Departments" asp-action="Edit" asp-route-id="@student.Id"
+                             class="text-secondary font-weight-bold text-xs" data-toggle="tooltip">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

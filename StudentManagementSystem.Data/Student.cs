@@ -14,6 +14,6 @@ namespace StudentManagementSystem.Data
         public DateTime? BirthDate { get; set; }
 
         [ForeignKey("DepartmentId")]
-        public Department department;
+        public Department? department;
     }
 }

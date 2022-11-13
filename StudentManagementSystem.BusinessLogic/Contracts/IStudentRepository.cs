@@ -10,7 +10,7 @@ namespace StudentManagementSystem.BusinessLogic.Contracts
 {
     public interface IStudentRepository : IGenericRepository<Student>
     {
-        public Task<IEnumerable<Student>> GetAll();
+        public Task<List<StudentVM>> GetStudentsVM();
         public Task<StudentVM> GetStudent();
     }
 }

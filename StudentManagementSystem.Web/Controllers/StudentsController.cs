@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StudentManagementSystem.BusinessLogic.Contracts;
+using StudentManagementSystem.BusinessLogic.Repositories;
 using StudentManagementSystem.Common.Constants;
 
 namespace StudentManagementSystem.Web.Controllers
@@ -8,10 +10,16 @@ namespace StudentManagementSystem.Web.Controllers
     [Authorize(Roles = Roles.SuperAdmin + "," + Roles.SystemManager)]
     public class StudentsController : Controller
     {
-        // GET: StudentsController
-        public ActionResult Index()
+        private readonly IStudentRepository studentRepository;
+
+        public StudentsController(IStudentRepository studentRepository)
         {
-            return View();
+            this.studentRepository = studentRepository;
+        }
+        // GET: StudentsController
+        public async Task<ActionResult> Index()
+        {
+            return View(await studentRepository.GetStudentsVM());
         }
 
         // GET: StudentsController/Details/5

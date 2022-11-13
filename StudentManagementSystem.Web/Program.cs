@@ -19,6 +19,7 @@ builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfi
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IDepartmentsRepository, DepartmentsRepository>();
+builder.Services.AddScoped<IStudentRepository, StudentsRepository>();
 builder.Services.AddAutoMapper(typeof(AutomapperConfig));
 
 builder.Services.AddControllersWithViews();

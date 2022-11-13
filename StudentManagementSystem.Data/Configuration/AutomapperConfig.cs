@@ -8,6 +8,7 @@ namespace StudentManagementSystem.Data.Configuration
         public AutomapperConfig()
         {
             CreateMap<Department, DepartmentVM>().ReverseMap();
+            CreateMap<Student, StudentVM>().ReverseMap();
         }
     }
 }

@@ -14,17 +14,28 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
     public class StudentsRepository : GenericRepository<Student>, IStudentRepository
     {
         private readonly ApplicationDbContext applicationDbContext;
+        private readonly IMapper mapper;
 
         public StudentsRepository(ApplicationDbContext applicationDbContext, IMapper mapper) : base(applicationDbContext)
         {
             this.applicationDbContext = applicationDbContext;
+            this.mapper = mapper;
         }
 
-        public async Task<IEnumerable<Student>> GetAll()
+        public async Task<List<StudentVM>> GetStudentsVM()
         {
-            var students = applicationDbContext.Users.AllAsync(user => user is Student);
+            //var students = await applicationDbContext.Users.AllAsync(user => user is Student);
+            try
+            {
+                var students = await applicationDbContext.Students.ToListAsync();
+                return mapper.Map<List<StudentVM>>(students);
+            }
+            catch (Exception)
+            {
 
-            throw new NotImplementedException();
+                throw;
+            }
+            
         }
 
         public Task<StudentVM> GetStudent()
