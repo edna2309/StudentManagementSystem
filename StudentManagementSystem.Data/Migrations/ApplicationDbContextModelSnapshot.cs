@@ -52,14 +52,14 @@ namespace StudentManagementSystem.Data.Migrations
                         new
                         {
                             Id = "88105423-d222-48ec-85c5-04e4f3cb2aa6",
-                            ConcurrencyStamp = "e11640fd-916e-4920-935e-25edd8bf88e8",
+                            ConcurrencyStamp = "c1bf0e4d-ff6d-4517-bb17-b4cf8ff9a29e",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = "4a15c4bc-ffac-481c-b997-475a1e82c911",
-                            ConcurrencyStamp = "e8b25e6b-3d68-4766-998f-5a8508155e44",
+                            ConcurrencyStamp = "b2d21600-5d18-4382-b3ba-4725a6dce729",
                             Name = "SystemManager",
                             NormalizedName = "SYSTEMMANAGER"
                         });
@@ -307,19 +307,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "807d4075-6fa0-465e-aa89-6255708fde21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f12c929e-cc4d-4573-b95c-5314124771e3",
+                            ConcurrencyStamp = "4063cf39-16ba-4e60-8394-b01ae7f44408",
                             Email = "superadmin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@LOCALHOST.COM",
                             NormalizedUserName = "SUPERADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH8GefPhnFLLj1ye2FQukVXrunUVZV3EC7+Z0UVz7j2CuGXnD5H4w1c5fprbmttx3g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEATHLvzzgOTd7MVVOayJpiYuEC9c/9tWJ9RdjbN4OX+lWvYSlV6RNuKGThIchVaAAg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1d74a8c4-9a09-49a7-88ac-677f5e38f33c",
+                            SecurityStamp = "51f55a17-7e38-4b5c-a646-ab1e9127a2a7",
                             TwoFactorEnabled = false,
                             UserName = "superadmin@localhost.com",
-                            DateCreated = new DateTime(2022, 11, 13, 19, 40, 59, 22, DateTimeKind.Local).AddTicks(6246),
-                            DateModified = new DateTime(2022, 11, 13, 19, 40, 59, 22, DateTimeKind.Local).AddTicks(6280),
+                            DateCreated = new DateTime(2022, 11, 15, 12, 16, 35, 106, DateTimeKind.Local).AddTicks(7247),
+                            DateModified = new DateTime(2022, 11, 15, 12, 16, 35, 106, DateTimeKind.Local).AddTicks(7284),
                             FirstName = "SuperAdmin",
                             LastName = "SuperAdmin"
                         },
@@ -327,19 +327,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "5843c9b4-cb39-4efd-843c-dbaea81c4706",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5a9ca7a8-f566-4621-bc13-505f2ad6a0a1",
+                            ConcurrencyStamp = "e23a6b3a-39a3-470c-8dac-5c8f03b36c06",
                             Email = "sysmanager@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SYSMANAGER@LOCALHOST.COM",
                             NormalizedUserName = "SYSMANAGER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIPXux0Sq2ofv2xndG8tmMjyu29YrffPCuNuFfHxiLRcteciJ/IeBdhfjMLBc/QvJA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENzpAHKOVZyYenGtS5tg+Ja4HURgXWwVkx3ioiA718/WwXXOOH+rv3GoZ/ysJWe2fQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6dc9e205-c120-42f3-9e88-795213407efc",
+                            SecurityStamp = "b97109c9-9777-43dc-be21-f995c2161ca9",
                             TwoFactorEnabled = false,
                             UserName = "sysmanager@localhost.com",
-                            DateCreated = new DateTime(2022, 11, 13, 19, 40, 59, 23, DateTimeKind.Local).AddTicks(7575),
-                            DateModified = new DateTime(2022, 11, 13, 19, 40, 59, 23, DateTimeKind.Local).AddTicks(7578),
+                            DateCreated = new DateTime(2022, 11, 15, 12, 16, 35, 112, DateTimeKind.Local).AddTicks(4278),
+                            DateModified = new DateTime(2022, 11, 15, 12, 16, 35, 112, DateTimeKind.Local).AddTicks(4281),
                             FirstName = "System",
                             LastName = "Manager"
                         });

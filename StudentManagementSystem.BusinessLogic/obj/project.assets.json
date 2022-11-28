@@ -918,7 +918,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.10",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10"
         },
         "compile": {
           "bin/placeholder/StudentManagementSystem.Common.dll": {}
@@ -2318,38 +2320,39 @@
     "net6.0": [
       "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.10",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.10",
       "StudentManagementSystem.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\ednap\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.BusinessLogic\\StudentManagementSystem.BusinessLogic.csproj",
+      "projectUniqueName": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.BusinessLogic\\StudentManagementSystem.BusinessLogic.csproj",
       "projectName": "StudentManagementSystem.BusinessLogic",
-      "projectPath": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.BusinessLogic\\StudentManagementSystem.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.BusinessLogic\\obj\\",
+      "projectPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.BusinessLogic\\StudentManagementSystem.BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\ednap\\.nuget\\packages\\",
+      "outputPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ednap\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Data\\StudentManagementSystem.Data.csproj": {
-              "projectPath": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Data\\StudentManagementSystem.Data.csproj"
+            "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Data\\StudentManagementSystem.Data.csproj": {
+              "projectPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Data\\StudentManagementSystem.Data.csproj"
             }
           }
         }
@@ -2371,6 +2374,14 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.0, )"
+          },
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.10, )"
+          },
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.10, )"
           }
         },
         "imports": [
@@ -2389,7 +2400,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

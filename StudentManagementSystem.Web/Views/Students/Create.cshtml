@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Add new student";
+}
+@model StudentManagementSystem.Common.Models.StudentVM
+
+<h5>Add new department</h5>
+<h7>Enter info about the new department</h7>
+
+<form asp-controller="Students" asp-action="Create" method="post">
+    <div class="mb-3 col-7">
+        <label asp-for="FirstName" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.FirstName)</label>
+        <input asp-for="FirstName" type="text" class="form-control" id="FirstName">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3 col-7">
+        <label asp-for="LastName" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.LastName)</label>
+        <input asp-for="LastName" type="text" class="form-control" id="LastName">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="mb-3 col-7">
+        <label asp-for="HighSchool" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.HighSchool)</label>
+        <input asp-for="HighSchool" type="text" class="form-control" id="HighSchool">
+        <span asp-validation-for="HighSchool" class="text-danger"></span>
+    </div>
+    <div class="mb-3 col-7">
+        <label asp-for="Address" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.Address)</label>
+        <input asp-for="Address" type="text" class="form-control" id="Address">
+        <span asp-validation-for="HighSchool" class="text-danger"></span>
+    </div>
+    <div class="mb-3 col-7">
+        <label asp-for="BirthDate" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.BirthDate)</label>
+        <input asp-for="BirthDate" type="text" class="form-control datepicker" id="BirthDate">
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

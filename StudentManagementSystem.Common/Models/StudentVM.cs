@@ -22,6 +22,8 @@ namespace StudentManagementSystem.Common.Models
 
         [Required]
         [Display(Name = "Birth date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        [DataType(DataType.Date)]
         public DateTime? BirthDate { get; set; }
 
         [Display(Name = "High school")]

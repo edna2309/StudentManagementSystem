@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj": {}
+    "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj": {
+    "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
+        "projectUniqueName": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
         "projectName": "StudentManagementSystem.Common",
-        "projectPath": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio projects\\StudentManagementSystem\\StudentManagementSystem.Common\\obj\\",
+        "projectPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
+        "packagesPath": "C:\\Users\\ednap\\.nuget\\packages\\",
+        "outputPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ednap\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +46,14 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -65,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
