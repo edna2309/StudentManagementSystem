@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using StudentManagementSystem.Common.CustomValidation;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentManagementSystem.Common.Models
 {
@@ -24,7 +19,8 @@ namespace StudentManagementSystem.Common.Models
         [Display(Name = "Birth date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [DataType(DataType.Date)]
-        public DateTime? BirthDate { get; set; }
+        [ValidateBirthDate]
+        public DateTime BirthDate { get; set; }
 
         [Display(Name = "High school")]
         public string? HighSchool { get; set; }
@@ -33,7 +29,6 @@ namespace StudentManagementSystem.Common.Models
 
         [Required]
         [Display(Name = "Department")]
-        public int DepartmentId { get; set; }
-
+        public int DepartmentId { get; set; }  
     }
 }

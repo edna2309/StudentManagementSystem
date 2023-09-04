@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using StudentManagementSystem.BusinessLogic.Contracts;
-using StudentManagementSystem.BusinessLogic.Repositories;
 using StudentManagementSystem.Common.Constants;
+using StudentManagementSystem.Common.Models;
 
 namespace StudentManagementSystem.Web.Controllers
 {
@@ -11,10 +11,12 @@ namespace StudentManagementSystem.Web.Controllers
     public class StudentsController : Controller
     {
         private readonly IStudentRepository studentRepository;
+        private readonly IDepartmentsRepository departmentsRepository;
 
-        public StudentsController(IStudentRepository studentRepository)
+        public StudentsController(IStudentRepository studentRepository, IDepartmentsRepository departmentsRepository)
         {
             this.studentRepository = studentRepository;
+            this.departmentsRepository = departmentsRepository;
         }
         // GET: StudentsController
         public async Task<ActionResult> Index()
@@ -28,20 +30,30 @@ namespace StudentManagementSystem.Web.Controllers
             return View();
         }
 
-        // GET: StudentsController/Create
-        public ActionResult Create()
-        {
+        // GET: StudendtsController/Create
+        public async Task<ActionResult> Create()
+        {   
+            List<DepartmentVM>? departments = await departmentsRepository.GetDepartmentsVM(); 
+            ViewBag.Departments = new SelectList(departments, "Id", "Name");
             return View();
         }
 
         // POST: StudentsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(StudentVM student)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    await studentRepository.GetStudentsVM();
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View();
+                }
             }
             catch
             {

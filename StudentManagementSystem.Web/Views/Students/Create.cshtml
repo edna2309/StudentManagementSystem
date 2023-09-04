@@ -2,14 +2,12 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-}
-@{
     ViewData["Title"] = "Add new student";
 }
 @model StudentManagementSystem.Common.Models.StudentVM
 
-<h5>Add new department</h5>
-<h7>Enter info about the new department</h7>
+<h5>Add new student</h5>
+<h7>Enter info about the student</h7>
 
 <form asp-controller="Students" asp-action="Create" method="post">
     <div class="mb-3 col-7">
@@ -38,10 +36,13 @@
         <input asp-for="BirthDate" type="text" class="form-control datepicker" id="BirthDate">
         <span asp-validation-for="BirthDate" class="text-danger"></span>
     </div>
+    <div class="mb-3 col-7">
+        <label asp-for="DepartmentId" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.DepartmentId)</label> 
+        <select name="Departments" asp-for="DepartmentId" class="form-control" asp-items="@ViewBag.Departments"></select>
+    </div>
     <button type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3">Save</button>
 </form>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-

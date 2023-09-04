@@ -992,25 +992,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ednap\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
+      "projectUniqueName": "D:\\projects\\SMS\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
       "projectName": "StudentManagementSystem.Common",
-      "projectPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
-      "packagesPath": "C:\\Users\\ednap\\.nuget\\packages\\",
-      "outputPath": "D:\\VS PROJECTS\\sms\\StudentManagementSystem.Common\\obj\\",
+      "projectPath": "D:\\projects\\SMS\\StudentManagementSystem.Common\\StudentManagementSystem.Common.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\SMS\\StudentManagementSystem.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ednap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1062,7 +1063,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

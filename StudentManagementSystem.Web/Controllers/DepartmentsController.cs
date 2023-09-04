@@ -36,13 +36,13 @@ namespace StudentManagementSystem.Web.Controllers
         // POST: DepartmentsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DepartmentVM model)
+        public async Task<ActionResult> Create(DepartmentVM model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    departmentsRepository.CreateDepartment(model);
+                    await departmentsRepository.CreateDepartment(model);
                     return RedirectToAction(nameof(Index));
 
                 }

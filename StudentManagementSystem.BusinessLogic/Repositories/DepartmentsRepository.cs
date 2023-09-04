@@ -24,7 +24,9 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
 
         public async Task CreateDepartment(DepartmentVM departmentVM)
         {
-            var department = mapper.Map<Department>(departmentVM);
+            Department department = mapper.Map<Department>(departmentVM);
+            department.DateCreated = DateTime.Now;
+            department.DateModified= DateTime.Now;  
             await applicationDbContext.AddAsync(department);
 
             await applicationDbContext.SaveChangesAsync();
@@ -32,14 +34,19 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
 
         public async Task<bool> DeleteDepartment(int Id)
         {
-            Department department = await applicationDbContext.Departments.FindAsync(Id);
-            if(department == null)
+            if(Id > 0)
             {
-                return false;
+                Department department = await applicationDbContext.Departments.FindAsync(Id);
+                if (department == null)
+                {
+                    return false;
+                }
+                applicationDbContext.Departments.Remove(department);
+                await applicationDbContext.SaveChangesAsync();
+                return true;
             }
-            applicationDbContext.Departments.Remove(department);
-            await applicationDbContext.SaveChangesAsync();
-            return true;
+            return false;
+           
         }
 
         public async Task<List<DepartmentVM>?> GetDepartmentsVM()
@@ -50,9 +57,8 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
                 return mapper.Map<List<DepartmentVM>>(departments);
             }
             catch 
-            {
-                
-                return null;
+            {                
+                return new List<DepartmentVM>();
             }
            
         }
