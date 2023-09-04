@@ -33,7 +33,7 @@
     </div>
     <div class="mb-3 col-7">
         <label asp-for="BirthDate" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.BirthDate)</label>
-        <input asp-for="BirthDate" type="text" class="form-control datepicker" id="BirthDate">
+        <input asp-for="BirthDate" type="text" class="form-control @* datepicker *@" id="BirthDate">
         <span asp-validation-for="BirthDate" class="text-danger"></span>
     </div>
     <div class="mb-3 col-7">
@@ -42,7 +42,14 @@
     </div>
     <button type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3">Save</button>
 </form>
-
+<script>
+    $("#BirthDate").datepicker({
+        maxDate: -1,
+        changeMonth: true,
+        changeYear: true
+    })
+</script>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
