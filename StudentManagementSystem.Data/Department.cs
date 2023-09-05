@@ -9,7 +9,7 @@ namespace StudentManagementSystem.Data
 {
     public class Department : BaseEntity
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string? Description { get; set; }
 
         public void SetInfo(string Name, string Description)

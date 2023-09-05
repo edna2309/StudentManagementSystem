@@ -12,5 +12,6 @@ namespace StudentManagementSystem.BusinessLogic.Contracts
     {
         public Task<List<StudentVM>> GetStudentsVM();
         public Task<StudentVM> GetStudent();
+        public Task<bool> CreateStudent(StudentVM studentVM);
     }
 }

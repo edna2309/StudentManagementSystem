@@ -24,7 +24,6 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
 
         public async Task<List<StudentVM>> GetStudentsVM()
         {
-            //var students = await applicationDbContext.Users.AllAsync(user => user is Student);
             try
             {
                 var students = await applicationDbContext.Students.ToListAsync();
@@ -41,6 +40,19 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
         public Task<StudentVM> GetStudent()
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> CreateStudent(StudentVM studentVM)
+        {
+            if(studentVM != null)
+            {
+                var student = mapper.Map<Student>(studentVM);
+                await applicationDbContext.AddAsync(student);
+
+                await applicationDbContext.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
     }
 }

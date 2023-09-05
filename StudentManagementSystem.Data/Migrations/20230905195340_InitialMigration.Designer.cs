@@ -12,7 +12,7 @@ using StudentManagementSystem.Data;
 namespace StudentManagementSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221113184059_InitialMigration")]
+    [Migration("20230905195340_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,14 +54,14 @@ namespace StudentManagementSystem.Data.Migrations
                         new
                         {
                             Id = "88105423-d222-48ec-85c5-04e4f3cb2aa6",
-                            ConcurrencyStamp = "e11640fd-916e-4920-935e-25edd8bf88e8",
+                            ConcurrencyStamp = "2d8d8922-2032-4fd9-928d-f09065ade9ac",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = "4a15c4bc-ffac-481c-b997-475a1e82c911",
-                            ConcurrencyStamp = "e8b25e6b-3d68-4766-998f-5a8508155e44",
+                            ConcurrencyStamp = "29975173-c303-4747-ab60-74093ca683c6",
                             Name = "SystemManager",
                             NormalizedName = "SYSTEMMANAGER"
                         });
@@ -278,12 +278,48 @@ namespace StudentManagementSystem.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("StudentManagementSystem.Data.Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HighSchool")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("StudentManagementSystem.Data.User", b =>
@@ -309,19 +345,19 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "807d4075-6fa0-465e-aa89-6255708fde21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f12c929e-cc4d-4573-b95c-5314124771e3",
+                            ConcurrencyStamp = "2f30f6b8-871e-4767-96fa-a6b0080a36aa",
                             Email = "superadmin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@LOCALHOST.COM",
                             NormalizedUserName = "SUPERADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH8GefPhnFLLj1ye2FQukVXrunUVZV3EC7+Z0UVz7j2CuGXnD5H4w1c5fprbmttx3g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJX4+9bxIbdQ+ow3AgpjIQGYsfz0XBj52XJeIO1kJrc5N7LDIrYnYRgh0hJz9No7pQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1d74a8c4-9a09-49a7-88ac-677f5e38f33c",
+                            SecurityStamp = "79fb204b-2df0-42c4-810a-2c6334800d7f",
                             TwoFactorEnabled = false,
                             UserName = "superadmin@localhost.com",
-                            DateCreated = new DateTime(2022, 11, 13, 19, 40, 59, 22, DateTimeKind.Local).AddTicks(6246),
-                            DateModified = new DateTime(2022, 11, 13, 19, 40, 59, 22, DateTimeKind.Local).AddTicks(6280),
+                            DateCreated = new DateTime(2023, 9, 5, 21, 53, 40, 499, DateTimeKind.Local).AddTicks(3900),
+                            DateModified = new DateTime(2023, 9, 5, 21, 53, 40, 499, DateTimeKind.Local).AddTicks(3936),
                             FirstName = "SuperAdmin",
                             LastName = "SuperAdmin"
                         },
@@ -329,38 +365,22 @@ namespace StudentManagementSystem.Data.Migrations
                         {
                             Id = "5843c9b4-cb39-4efd-843c-dbaea81c4706",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5a9ca7a8-f566-4621-bc13-505f2ad6a0a1",
+                            ConcurrencyStamp = "505800b5-e659-4f51-a954-dc6f571e9267",
                             Email = "sysmanager@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "SYSMANAGER@LOCALHOST.COM",
                             NormalizedUserName = "SYSMANAGER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIPXux0Sq2ofv2xndG8tmMjyu29YrffPCuNuFfHxiLRcteciJ/IeBdhfjMLBc/QvJA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA3Dsky5Qs34us7oJZhKQtU22afOURwZA36F+VlnQ5rk6OJByLAbSSIGIxrVC88YNw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6dc9e205-c120-42f3-9e88-795213407efc",
+                            SecurityStamp = "0dbfac4f-d3f3-40cd-adea-6d81165ba9d2",
                             TwoFactorEnabled = false,
                             UserName = "sysmanager@localhost.com",
-                            DateCreated = new DateTime(2022, 11, 13, 19, 40, 59, 23, DateTimeKind.Local).AddTicks(7575),
-                            DateModified = new DateTime(2022, 11, 13, 19, 40, 59, 23, DateTimeKind.Local).AddTicks(7578),
+                            DateCreated = new DateTime(2023, 9, 5, 21, 53, 40, 500, DateTimeKind.Local).AddTicks(5570),
+                            DateModified = new DateTime(2023, 9, 5, 21, 53, 40, 500, DateTimeKind.Local).AddTicks(5573),
                             FirstName = "System",
                             LastName = "Manager"
                         });
-                });
-
-            modelBuilder.Entity("StudentManagementSystem.Data.Student", b =>
-                {
-                    b.HasBaseType("StudentManagementSystem.Data.User");
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("HighSchool")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Student");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

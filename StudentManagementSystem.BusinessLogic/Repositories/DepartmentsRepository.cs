@@ -25,8 +25,6 @@ namespace StudentManagementSystem.BusinessLogic.Repositories
         public async Task CreateDepartment(DepartmentVM departmentVM)
         {
             Department department = mapper.Map<Department>(departmentVM);
-            department.DateCreated = DateTime.Now;
-            department.DateModified= DateTime.Now;  
             await applicationDbContext.AddAsync(department);
 
             await applicationDbContext.SaveChangesAsync();

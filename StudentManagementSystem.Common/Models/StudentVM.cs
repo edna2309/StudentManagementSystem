@@ -5,7 +5,7 @@ namespace StudentManagementSystem.Common.Models
 {
     public class StudentVM
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Display(Name="First name")]

@@ -33,12 +33,12 @@
     </div>
     <div class="mb-3 col-7">
         <label asp-for="BirthDate" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.BirthDate)</label>
-        <input asp-for="BirthDate" type="text" class="form-control @* datepicker *@" id="BirthDate">
+        <input asp-for="BirthDate" type="text" class="form-control" id="BirthDate">
         <span asp-validation-for="BirthDate" class="text-danger"></span>
     </div>
     <div class="mb-3 col-7">
         <label asp-for="DepartmentId" class="form-label text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">@Html.DisplayNameFor(model => model.DepartmentId)</label> 
-        <select name="Departments" asp-for="DepartmentId" class="form-control" asp-items="@ViewBag.Departments"></select>
+        <select name="DepartmentId" asp-for="DepartmentId" class="form-control" asp-items="@ViewBag.Departments" id ="DepartmentId"></select>
     </div>
     <button type="submit" class="btn btn-outline-primary btn-sm mb-0 me-3">Save</button>
 </form>

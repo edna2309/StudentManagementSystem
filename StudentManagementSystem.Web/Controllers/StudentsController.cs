@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StudentManagementSystem.BusinessLogic.Contracts;
 using StudentManagementSystem.Common.Constants;
@@ -32,9 +33,8 @@ namespace StudentManagementSystem.Web.Controllers
 
         // GET: StudendtsController/Create
         public async Task<ActionResult> Create()
-        {   
-            List<DepartmentVM>? departments = await departmentsRepository.GetDepartmentsVM(); 
-            ViewBag.Departments = new SelectList(departments, "Id", "Name");
+        {
+            await PopulateDepartments();
             return View();
         }
 
@@ -47,8 +47,12 @@ namespace StudentManagementSystem.Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    await studentRepository.GetStudentsVM();
-                    return RedirectToAction(nameof(Index));
+                    if (!await studentRepository.CreateStudent(student))
+                    {
+                        ModelState.AddModelError(string.Empty, "The student was not created successfully.");
+                    }
+                     return RedirectToAction(nameof(Index));
+
                 }
                 else
                 {
@@ -57,6 +61,7 @@ namespace StudentManagementSystem.Web.Controllers
             }
             catch
             {
+                await PopulateDepartments();
                 return View();
             }
         }
@@ -101,6 +106,12 @@ namespace StudentManagementSystem.Web.Controllers
             {
                 return View();
             }
+        }
+
+        public async Task PopulateDepartments()
+        {
+            List<DepartmentVM>? departments = await departmentsRepository.GetDepartmentsVM();
+            ViewBag.Departments = new SelectList(departments, "Id", "Name");
         }
     }
 }
